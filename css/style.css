@@ -1,0 +1,75 @@
+﻿body {
+    background-color: #01051C;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    color: #000; /* В соответствии с вашей указанной настройкой, оставлен измененный цвет текста */
+    background-color: #FFF; /* Белый фон контейнера */
+    padding: 20px;
+    margin-top: 100vh; /* Чтобы контент начинался после видео */
+    border-radius: 15px; /* Закругленные углы контейнера */
+}
+
+/* Общие стили для окошек */
+.box {
+    background-color: #FFF;
+    color: #000;
+    padding: 20px;
+    margin-bottom: 20px; /* Удалено margin-left и margin-right, так как оно может быть специфично для каждого box */
+    border-radius: 15px;
+    text-align: center; /* Выравнивание заголовков и текста внутри по центру */
+}
+
+h3 {
+    text-align: left;
+}
+
+/* Стили для элементов списка с ссылками и QR-кодами */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul li img {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* Стили для окошечка "Полезные Ссылки" */
+.useful-links li {
+    display: block; /* Размещаем ссылки в столбик */
+    margin-bottom: 10px;
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.useful-links a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #000;
+    display: inline-block;
+}
+
+.useful-links a:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
