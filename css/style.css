@@ -73,3 +73,31 @@ ul li img {
     color: #FFF;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #333; /* Темнее фон для мобильных устройств */
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .box {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    video {
+        position: relative; /* Изменяем позиционирование для мобильных */
+        width: 100%; /* Полная ширина экрана */
+        height: auto; /* Автовысота сохранит пропорции */
+    }
+
+    ul li img {
+        width: 30px; /* Меньший размер QR кодов */
+    }
+
+    .useful-links a {
+        font-size: 14px; /* Увеличиваем размер шрифта для лучшей читаемости */
+    }
+}
