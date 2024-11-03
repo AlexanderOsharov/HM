@@ -53,51 +53,104 @@ ul li img {
 }
 
 /* Стили для окошечка "Полезные Ссылки" */
+.useful-links-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Цвет заголовка */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000; /* Подчёркивание заголовка */
+    padding-bottom: 10px;
+}
+
+.useful-links {
+    padding-left: 0; /* Убираем отступы */
+}
+
 .useful-links li {
-    display: block; /* Размещаем ссылки в столбик */
-    margin-bottom: 10px;
-    text-align: left; /* Выравниваем текст по левому краю */
+    background-color: #f9f9f9; /* Светлый фон для ссылок */
+    border: 1px solid #ddd; /* Обводка вокруг каждой ссылки */
+    border-radius: 8px; /* Закруглённые углы у ссылок */
+    margin-bottom: 10px; /* Отступ между элементами списка */
+    padding: 10px 15px; /* Внутренние отступы */
+    display: flex; /* Устанавливаем флекс для выравнивания содержимого */
+    justify-content: space-between; /* Размещаем содержимое по краям */
+    align-items: center; /* Вертикальное выравнивание */
+    transition: background-color 0.3s ease; /* Плавный переход для эффекта наведения */
+}
+
+.useful-links li:hover {
+    background-color: #e0e0e0; /* Меняем цвет при наведении */
 }
 
 .useful-links a {
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    color: #000;
-    display: inline-block;
+    text-decoration: none; /* Убираем подчёркивание у ссылок */
+    color: #007BFF; /* Цвет текста ссылок */
+    font-weight: 500; /* Увеличенный вес текста ссылок */
+    flex-grow: 1; /* Ссылка занимает доступное пространство */
+    margin-right: 10px; /* Отступ между ссылкой и QR-кодом */
 }
 
-.useful-links a:hover {
-    background-color: #000;
-    color: #FFF;
+.qr-code-icon {
+    width: 50px; /* Увеличиваем размер QR-кодов */
+    height: auto; /* Автовысота сохраняет пропорции */
 }
 
+/* Добавляем анимацию для QR-кодов при наведении */
+.qr-code-icon:hover {
+    transform: scale(1.1); /* Увеличиваем QR-код при наведении */
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное позиционирование */
+    z-index: 1000; /* Поверх остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Позволяет прокручивать содержимое при необходимости */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Ширина изображения */
+    max-width: 700px; /* Максимальная ширина */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.close {
+    position: absolute; /* Позиционирование для кнопки закрытия */
+    top: 15px;
+    right: 35px;
+    color: white; /* Цвет кнопки закрытия */
+    font-size: 40px; /* Размер кнопки закрытия */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* Цвет при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+/* Медиа-запрос для мобильных устройств */
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: #333; /* Темнее фон для мобильных устройств */
+    .useful-links-title {
+        font-size: 20px; /* Уменьшаем размер заголовка для мобильных устройств */
     }
 
-    .content {
-        padding: 10px;
+    .useful-links li {
+        font-size: 14px; /* Увеличиваем шрифт ссылок для лучшей читаемости на мобильных */
     }
 
-    .box {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    video {
-        position: relative; /* Изменяем позиционирование для мобильных */
-        width: 100%; /* Полная ширина экрана */
-        height: auto; /* Автовысота сохранит пропорции */
-    }
-
-    ul li img {
-        width: 30px; /* Меньший размер QR кодов */
-    }
-
-    .useful-links a {
-        font-size: 14px; /* Увеличиваем размер шрифта для лучшей читаемости */
+    .qr-code-icon {
+        width: 30px; /* Уменьшаем размер QR-кодов для мобильных устройств */
     }
 }
+

@@ -9,6 +9,12 @@
     <video id="mainVideo" autoplay muted playsinline>
         <source src="video/splash_video.mp4" type="video/mp4">
     </video>
+    <!-- Модальное окно для показа изображений -->
+    <div id="qrModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage" alt="QR-код">
+        <div id="caption"></div>
+    </div>
     <div class="content">
         <div class="box">
             <!-- Новый контейнер для "Описание Проекта" -->
@@ -17,15 +23,40 @@
         </div>
         <div class="box">
             <!-- Новый контейнер для "Полезные Ссылки" -->
-            <h3>Полезные сслыки:</h3>
+            <h3 class="useful-links-title">Полезные ссылки:</h3>
             <ul class="useful-links">
-                <li><a href="https://forms.gle/DjrqDoFjbGJeLLtB9">1</a> - Опрос <img src="img/form.png" alt="QR 1"></li>
-                <li><a href="https://alexanderosharov.github.io/HM-VotingResults/">2</a> - Результаты опроса (актуально на 2024-03-15) <img src="img/HM-VotingResults.png" alt="QR 2"></li>
-                <li><a href="https://github.com/AlexanderOsharov/HM-Abstracts">3</a> - Тезисы <img src="img/abstracts.png" alt="QR 3"></li>
-                <li><a href="https://github.com/AlexanderOsharov/HistoryMoment">4</a> - GitHub приложения <img src="img/HM-app.png" alt="QR 4"></li>
-                <li><a href="https://github.com/AlexanderOsharov/HM-server">5</a> - Github сервера <img src="img/HM-server.png" alt="QR 5"></li>
-                <li><a href="https://1drv.ms/v/s!AjlyOsqZFbYNudxbsmbbmBXAUI_U0Q?e=PBz7be">6</a> - Демонстрация работы <img src="img/demo.png" alt="QR 6"></li>
-
+                <li>
+                    <a href="https://forms.gle/DjrqDoFjbGJeLLtB9">Опрос</a>
+                    <img src="img/form.png" alt="QR 1" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://alexanderosharov.github.io/HM-VotingResults/">Результаты опроса (актуально на 2024-03-15)</a>
+                    <img src="img/HM-VotingResults.png" alt="QR 2" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://github.com/AlexanderOsharov/HM-Abstracts">Тезисы</a>
+                    <img src="img/abstracts.png" alt="QR 3" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://github.com/AlexanderOsharov/HM-documentation">Документация</a>
+                    <img src="img/HM-doc.png" alt="QR 4" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://github.com/AlexanderOsharov/HistoryMoment">GitHub приложения</a>
+                    <img src="img/HM-app.png" alt="QR 5" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://github.com/AlexanderOsharov/HM-server">Github сервера</a>
+                    <img src="img/HM-server.png" alt="QR 6" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://1drv.ms/v/s!AjlyOsqZFbYNudxbsmbbmBXAUI_U0Q?e=PBz7be">Демонстрация работы</a>
+                    <img src="img/demo.png" alt="QR 7" class="qr-code-icon">
+                </li>
+                <li>
+                    <a href="https://t.me/history_m0ment">Канал</a>
+                    <img src="img/HM-channel.jpg" alt="QR 8" class="qr-code-icon">
+                </li>
             </ul>
         </div>
     </div>
